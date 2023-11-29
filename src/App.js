@@ -1,23 +1,20 @@
-import logo from './logo.svg';
 import './App.css';
+import Halaman3 from './Halaman3';
+import FormPage from './FormPage';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className='container-content'>
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Halaman3 />} />
+            <Route path="/mahasiswa" element={<Halaman3 />} />
+            <Route path="/form" element={<FormPage />} />
+          </Routes>
+        </BrowserRouter>
+      </div>
     </div>
   );
 }
